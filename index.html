@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="grid">
+      <form onsubmit="handleSubmitForm(event)">
+        <h4>TO DO LIST</h4>
+        <input required placeholder="Name of task" id="name-of-task" />
+        <div>
+          <h3 class="title-priority">Priority</h3>
+          <ul class="list-priority">
+            <li>
+              <input
+                name="hight"
+                onchange="handleOnChangeInputCheckbox(event)"
+                id="check-h"
+                type="checkbox"
+              />
+              <label for="check-h">Hight</label>
+            </li>
+            <li>
+              <input
+                name="medium"
+                onchange="handleOnChangeInputCheckbox(event)"
+                id="check-m"
+                type="checkbox"
+              />
+              <label for="check-m">Med</label>
+            </li>
+            <li>
+              <input
+                name="low"
+                onchange="handleOnChangeInputCheckbox(event)"
+                id="check-l"
+                type="checkbox"
+              />
+              <label for="check-l">Low</label>
+            </li>
+          </ul>
+        </div>
+        <input value="Save" type="submit" />
+      </form>
+      <ul id="container-task"></ul>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
